@@ -13,7 +13,7 @@ export interface Habit {
   description?: string;
   entries: HabitEntry[];
   createdAt: string;
-  targetPerWeek: number; // e.g., 7 for daily
+  targetPerWeek: number;
 }
 
 export interface AIInsight {
@@ -23,9 +23,16 @@ export interface AIInsight {
   predictedSuccess: number; // 0-100 percentage
 }
 
-export interface HabitStats {
-  totalHabits: number;
-  totalCompletions: number;
-  currentStreak: number;
-  completionRate: number;
+export interface UserStats {
+  xp: number;
+  level: number;
+  badges: Badge[];
+}
+
+export interface Badge {
+  id: string;
+  name: string;
+  description: string;
+  icon: string;
+  unlockedAt: string;
 }
